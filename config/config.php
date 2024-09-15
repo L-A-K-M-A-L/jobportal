@@ -12,9 +12,9 @@
     // DSn -> Data Source Name
     $conn = new PDO("mysql:host=$host;dbname=$dbname" , $user, $pass);
     $conn ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Data Base Connected successfully!";
+    // echo "Data Base Connected successfully!";
    }catch(PDOException $e){
-    echo $e->getMessage();
+    echo "<script>alert('{$e->getMessage()}')</script>" ;
    }
     
    // if($conn == true ){
